@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackcoffer</title>
+    <style>
+        .Intensity,
+        .Likelihood,
+        .Relevance {
+            width: 200px;
+            height: 40px;
+            background-image: linear-gradient(white, black);
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+        }
+        /* .ilr-div {
+            width: 210px;
+            margin-top: 150px;
+            margin-left: 550px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+        <header style="display: flex;">
+            <img width="40" height="40" style="margin-left: 10px; margin-top: 20px; border-radius: 10px;" src="data:image/jpeg;base64,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"
+                alt="">
+            <h1 style="margin-left: 550px;">Blackcoffer</h1>
+        </header>
+
+    </div>
+    <div style="display: flex; justify-content: space-evenly;margin-top: 20px;">
+        <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;" class="ilr-div">
+            <a href="./bar/intensity.html"><button class="Intensity" style="margin-top: 20px;" onclick="intenbar()">Intensity-BarChart</button></a> <br>
+            <a href="./bar/likelihood.html"><button style="margin-top: 20px;" class="Likelihood" onclick="likebar()">Likelihood-BarChart</button></a> <br>
+            <a href="./bar/relevance.html"><button style="margin-top: 20px; margin-bottom: 20px;" class="Relevance" onclick="revebar()">Relevance-BarChart</button></a>
+        </div>
+        <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;" class="ilr-div">
+            <a href="./pie/intensity.html"><button class="Intensity" style="margin-top: 20px;" onclick="intenpie()">Intensity-PieChart</button></a> <br>
+            <a href="./pie/likelihood.html"><button style="margin-top: 20px;" class="Likelihood" onclick="likepie()">Likelihood-PieChart</button></a> <br>
+            <a href="./pie/relevance.html"><button style="margin-top: 20px; margin-bottom: 20px;" class="Relevance" onclick="revepie()">Relevance-PieChart</button></a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
